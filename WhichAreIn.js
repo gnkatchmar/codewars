@@ -22,7 +22,6 @@
 
 function inArray(array1,array2) {
   var answer = [];
-  console.log(array1);
   for (var i = 0, len = array1.length; i < len; i++) {
     if (typeof array1[i] === "string") {
       if (array2.toString().includes(array1[i].toString())) {
