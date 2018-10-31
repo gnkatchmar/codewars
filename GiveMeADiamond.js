@@ -13,23 +13,31 @@
 //JS students, like Python ones, must implement the diamond(n) method, and return null for invalid input.
 
 function diamond(n){
-  if (n < 1 || n % 2 > 0) {
+  if (n < 1 || n % 2 == 0) {
     return null;
   } else {
-    mid = "";
+    diam = "";
     domid = n;
     do {
-      mid += "*";
+      diam += "*";
       domid -= 1;
     }
     while (domid > 0)
     
+    sp = " ";
+    
     if (n > 1)
       do {
-        mid += "*";
+        line = "";
+        for (var i = 0, len = n-2; i < len; i++) {
+          line += '*';
+        }
+        diam = sp + line + "\n" + diam + "\n" + sp + line;
         n -= 2;
+        sp += " ";
       }
       while (n > 1)
+      diam += "\n";
   }
   
   return diam;
