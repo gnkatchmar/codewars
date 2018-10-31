@@ -41,3 +41,16 @@ function diamond(n){
   
   return diam;
 }
+
+function diamond(n){
+  if( n%2==0 || n<1 ) return null
+  var x=0, add, diam = line(x,n);
+  while( (x+=2) < n ){
+    add = line(x/2,n-x);
+    diam = add+diam+add;
+  }
+  return diam;
+}//z.
+
+function repeat(str,x){return Array(x+1).join(str); }
+function line(spaces,stars){ return repeat(" ",spaces)+repeat("*",stars)+"\n"; }
