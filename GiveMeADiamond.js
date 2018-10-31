@@ -17,14 +17,13 @@ function diamond(n){
     return null;
   } else {
     diam = "";
+    sp = " ";
     domid = n;
     do {
       diam += "*";
       domid -= 1;
     }
     while (domid > 0)
-    
-    sp = " ";
     
     if (n > 1)
       do {
